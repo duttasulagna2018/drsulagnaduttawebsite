@@ -86,13 +86,14 @@ p { margin: 0 0 1em; }
 /* hero */
 .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--mist) 0%, #fff 100%); }
 .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(28px, 5vw, 72px); align-items: center; padding-top: clamp(40px, 7vw, 96px); padding-bottom: clamp(48px, 7vw, 96px); }
-.postnominals { font: 500 1rem/1.5 var(--ui); color: var(--navy-2); margin: 0 0 1.4em; letter-spacing: 0.01em; }
+.postnominals { font: 600 1.14rem/1.5 var(--ui); color: #000; margin: 0 0 1.4em; letter-spacing: 0.01em; }
 .hero .lede { margin-bottom: 1.8em; }
 /* text column spans the portrait's height: name at its top edge, buttons at its bottom edge */
 @media (min-width: 861px) {
   .hero .wrap { align-items: stretch; }
   .hero-copy { display: flex; flex-direction: column; justify-content: space-between; }
-  .hero-copy h1 { margin-top: -0.12em; }
+  .hero-head { padding-top: 18px; }
+  .hero-copy h1 { margin-top: 0; }
   .hero-copy .lede { margin: 0; font-size: clamp(1.18rem, 1.45vw, 1.32rem); line-height: 1.6; }
   .hero-copy .postnominals { margin: 0; }
 }
