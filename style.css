@@ -88,24 +88,21 @@ p { margin: 0 0 1em; }
 .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(28px, 5vw, 72px); align-items: center; padding-top: clamp(40px, 7vw, 96px); padding-bottom: clamp(48px, 7vw, 96px); }
 .postnominals { font: 500 1rem/1.5 var(--ui); color: var(--navy-2); margin: 0 0 1.4em; letter-spacing: 0.01em; }
 .hero .lede { margin-bottom: 1.8em; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-figure { position: relative; justify-self: center; width: min(100%, 440px); }
-.hero-figure .curves { position: absolute; left: -62%; top: 6%; width: 178%; height: auto; z-index: 0; pointer-events: none; }
-.hero-figure img { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--radius-s); box-shadow: 0 30px 60px -30px rgba(14, 42, 91, 0.45); }
-.hero-figure figcaption { position: relative; z-index: 1; font: 500 0.85rem/1.4 var(--ui); color: var(--steel); margin-top: 14px; text-align: center; }
-.curves path { fill: none; stroke: var(--sky-deep); stroke-width: 1.4; opacity: .8; }
-.curves path.p50 { stroke: var(--navy-2); opacity: .35; stroke-width: 1.6; }
-.curves text { font: 500 11px var(--ui); fill: var(--steel); opacity: .8; }
-@media (prefers-reduced-motion: no-preference) {
-  .curves path { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 2.4s cubic-bezier(.2,.7,.2,1) forwards; }
-  .curves path:nth-child(2) { animation-delay: .12s; } .curves path:nth-child(3) { animation-delay: .24s; }
-  .curves path:nth-child(4) { animation-delay: .36s; } .curves path:nth-child(5) { animation-delay: .48s; }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
+/* text column spans the portrait's height: name at its top edge, buttons at its bottom edge */
+@media (min-width: 861px) {
+  .hero .wrap { align-items: stretch; }
+  .hero-copy { display: flex; flex-direction: column; justify-content: space-between; }
+  .hero-copy h1 { margin-top: -0.12em; }
+  .hero-copy .lede { margin: 0; font-size: clamp(1.18rem, 1.45vw, 1.32rem); line-height: 1.6; }
+  .hero-copy .postnominals { margin: 0; }
 }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-figure { justify-self: center; align-self: center; width: min(100%, 440px); margin: 0; }
+.hero-figure img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--radius-s); box-shadow: 0 30px 60px -30px rgba(14, 42, 91, 0.45); }
+.hero-figure figcaption { position: relative; z-index: 1; font: 500 0.85rem/1.4 var(--ui); color: var(--steel); margin-top: 14px; text-align: center; }
 @media (max-width: 860px) {
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-figure { width: min(72%, 320px); order: -1; }
-  .hero-figure .curves { left: -40%; width: 160%; }
 }
 
 /* credential strip */
