@@ -275,3 +275,6 @@ a.wa { display: inline-flex; align-items: center; gap: 10px; }
 .site-foot a.wa { display: flex; }
 .contact-list .contact-links { display: block; margin-top: 6px; font: 500 0.9rem/1.5 var(--ui); color: var(--steel); }
 .contact-list .contact-links a { font: inherit; color: var(--navy); }
+.byline-role { display: block; color: var(--navy); text-decoration: none; }
+.byline-role:hover { text-decoration: underline; }
+.hero .lede a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 3px; }
