@@ -273,3 +273,5 @@ sup.cite a:hover { text-decoration: underline; }
 a.wa { display: inline-flex; align-items: center; gap: 10px; }
 .wa-icon { flex: none; }
 .site-foot a.wa { display: flex; }
+.contact-list .contact-links { display: block; margin-top: 6px; font: 500 0.9rem/1.5 var(--ui); color: var(--steel); }
+.contact-list .contact-links a { font: inherit; color: var(--navy); }
