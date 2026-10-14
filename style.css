@@ -172,6 +172,12 @@ p { margin: 0 0 1em; }
 .post-row p { margin: 0; color: var(--steel); max-width: 44em; }
 .post-row .tag { font: 600 0.78rem/1 var(--ui); color: var(--navy-2); background: var(--mist); padding: 7px 11px; border-radius: 999px; white-space: nowrap; }
 @media (max-width: 760px) { .post-row { grid-template-columns: 1fr; } .post-row .tag { justify-self: start; } }
+.blog-home { padding: clamp(40px, 5vw, 72px) 0; }
+.blog-home .post-row { grid-template-columns: 120px 1fr auto; gap: 4px 24px; padding: 16px 0; }
+.blog-home .post-row h3 { font-size: 1.12rem; margin: 0 0 4px; }
+.blog-home .post-row p { font-size: 0.9rem; line-height: 1.5; }
+.blog-home .post-row .meta { font-size: 0.8rem; }
+@media (max-width: 760px) { .blog-home .post-row { grid-template-columns: 1fr; padding: 14px 0; } }
 
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
 .filters button { font: 500 0.9rem/1 var(--ui); padding: 10px 15px; border-radius: 999px; border: 1.5px solid var(--sky); background: #fff; color: var(--navy); cursor: pointer; }
